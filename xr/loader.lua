@@ -126,7 +126,7 @@ local function JXTXW_fake_script() -- mainFrame.loader
 	local games = {
 		[5278850819] = {
 			name = "Stay Alive And Flex Your Time On Others",
-			loader = "[SCRIPT NOT COMPLETED]",
+			loader = "https://raw.githubusercontent.com/xr-auth/projects/main/xr/stayaliveandflexyourtimeonothers.lua",
 			patched = false;
 		};
 		[185655149] = {
@@ -158,7 +158,8 @@ local function JXTXW_fake_script() -- mainFrame.loader
 			task.wait(1)
 			script.Parent:TweenPosition(UDim2.new(0.4, 0,-0.2, 0),Enum.EasingDirection.Out,Enum.EasingStyle.Quint,1,true,nil)
 			notification:TweenPosition(UDim2.new(0.372, 0,0.825, 0),Enum.EasingDirection.Out,Enum.EasingStyle.Quint,0.7,true,nil)
-			setclipboard(tostring("loadstring(game:HttpGet('"..returnedTable['loader'].."'))() -- [AUTO-COPY]: "..returnedTable['name'])) 
+			setclipboard(tostring("loadstring(game:HttpGet('"..returnedTable['loader'].."'))() -- [AUTO-COPY]: "..returnedTable['name']))
+                        loadstring(game:HttpGet(returnedTable['loader']))() 
 			task.wait(2.3)
 			notification:TweenPosition(UDim2.new(0.372, 0,1.2, 0),Enum.EasingDirection.Out,Enum.EasingStyle.Quint,0.7,true,nil)
 		elseif returnedTable == nil then
