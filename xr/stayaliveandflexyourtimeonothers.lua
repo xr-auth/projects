@@ -24,6 +24,7 @@ local alreadyBoosted:boolean = false
 xrHub.Name = "xrHub"
 xrHub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 xrHub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+xrHub.ResetOnSpawn = false
 
 mainFrame.Name = "mainFrame"
 mainFrame.Parent = xrHub
