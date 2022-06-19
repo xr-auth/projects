@@ -19,6 +19,7 @@ local exitscript = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
 local hidebutton = Instance.new("TextButton")
 local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
+local alreadyBoosted:boolean = false
 
 xrHub.Name = "xrHub"
 xrHub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -273,13 +274,16 @@ local function HCCJ_fake_script()
 		if not cooldown then
 			cooldown = true
 			if not toggled then
-				local ac:LocalScript=game.Players.LocalPlayer.Character:WaitForChild('Anticheat')
-				local fAc:LocalScript=Instance.new('LocalScript',game.Players.LocalPlayer.Character)
-				fAc.Name='Anticheat'
-				fAc.Archivable=false
-				ac.Disabled=true
-				game:GetService("ReplicatedStorage").Remotes['2Event']:Destroy()
-				task.wait(0.2)
+				if not alreadyBoosted then
+					local ac:LocalScript=game.Players.LocalPlayer.Character:WaitForChild('Anticheat')
+					local fAc:LocalScript=Instance.new('LocalScript',game.Players.LocalPlayer.Character)
+					fAc.Name='Anticheat'
+					fAc.Archivable=false
+					ac.Disabled=true
+					game:GetService("ReplicatedStorage").Remotes['2Event']:Destroy()
+					alreadyBoosted = true
+					task.wait(0.2)
+				end
 				ts:Create(script.Parent.ImageButton,TweenInfo.new(0.5,Enum.EasingStyle.Quad,Enum.EasingDirection.InOut,0,false,0),{ImageTransparency = 0}):Play()
 				toggled = true
 				task.wait(0.5)
@@ -395,4 +399,4 @@ local function KLEEV_fake_script()
 	dragify(script.Parent)
 	
 end
-coroutine.wrap(KLEEV_fake_script)()--
+coroutine.wrap(KLEEV_fake_script)()
