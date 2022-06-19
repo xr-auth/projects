@@ -3,12 +3,20 @@ local mainFrame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local title = Instance.new("TextLabel")
 local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 local desc = Instance.new("TextLabel")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
 local notification = Instance.new("Frame")
 local UICorner_2 = Instance.new("UICorner")
 local title_2 = Instance.new("TextLabel")
-local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
+local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
 local desc_2 = Instance.new("TextLabel")
+local UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint")
+local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
+local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
 
 mainUI.Name = "mainUI"
 mainUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -38,6 +46,9 @@ title.TextWrapped = true
 UITextSizeConstraint.Parent = title
 UITextSizeConstraint.MaxTextSize = 31
 
+UIAspectRatioConstraint.Parent = title
+UIAspectRatioConstraint.AspectRatio = 10.781
+
 desc.Name = "desc"
 desc.Parent = mainFrame
 desc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -47,8 +58,18 @@ desc.Size = UDim2.new(0.999999881, 0, 0.24868913, 0)
 desc.Font = Enum.Font.SourceSans
 desc.Text = "Checking game"
 desc.TextColor3 = Color3.fromRGB(255, 255, 255)
+desc.TextScaled = true
 desc.TextSize = 22.000
 desc.TextWrapped = true
+
+UIAspectRatioConstraint_2.Parent = desc
+UIAspectRatioConstraint_2.AspectRatio = 14.857
+
+UITextSizeConstraint_2.Parent = desc
+UITextSizeConstraint_2.MaxTextSize = 22
+
+UIAspectRatioConstraint_3.Parent = mainFrame
+UIAspectRatioConstraint_3.AspectRatio = 3.695
 
 notification.Name = "notification"
 notification.Parent = mainUI
@@ -71,8 +92,11 @@ title_2.TextScaled = true
 title_2.TextSize = 14.000
 title_2.TextWrapped = true
 
-UITextSizeConstraint_2.Parent = title_2
-UITextSizeConstraint_2.MaxTextSize = 31
+UITextSizeConstraint_3.Parent = title_2
+UITextSizeConstraint_3.MaxTextSize = 31
+
+UIAspectRatioConstraint_4.Parent = title_2
+UIAspectRatioConstraint_4.AspectRatio = 16.055
 
 desc_2.Name = "desc"
 desc_2.Parent = notification
@@ -83,10 +107,20 @@ desc_2.Size = UDim2.new(0.999999881, 0, 0.24868913, 0)
 desc_2.Font = Enum.Font.SourceSans
 desc_2.Text = "Script copied to your clipboard."
 desc_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+desc_2.TextScaled = true
 desc_2.TextSize = 22.000
 desc_2.TextWrapped = true
 
-local function NSUD_fake_script() -- mainFrame.loader 
+UITextSizeConstraint_4.Parent = desc_2
+UITextSizeConstraint_4.MaxTextSize = 22
+
+UIAspectRatioConstraint_5.Parent = desc_2
+UIAspectRatioConstraint_5.AspectRatio = 22.124
+
+UIAspectRatioConstraint_6.Parent = notification
+UIAspectRatioConstraint_6.AspectRatio = 5.502
+
+local function JXTXW_fake_script() -- mainFrame.loader 
 	local script = Instance.new('LocalScript', mainFrame)
 
 	local games = {
@@ -137,4 +171,4 @@ local function NSUD_fake_script() -- mainFrame.loader
 		end
 	end)
 end
-coroutine.wrap(NSUD_fake_script)()
+coroutine.wrap(JXTXW_fake_script)()
