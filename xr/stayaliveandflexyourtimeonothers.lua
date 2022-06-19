@@ -176,7 +176,7 @@ hidebutton.TextWrapped = true
 UIAspectRatioConstraint_3.Parent = mainFrame
 UIAspectRatioConstraint_3.AspectRatio = 7.348
 
-local function BBGYHO_fake_script()
+local function KAHQT_fake_script()
 	local script = Instance.new('LocalScript', toggleBox)
 
 	local toggleButton:TextButton = script.Parent.ImageButton
@@ -231,8 +231,8 @@ local function BBGYHO_fake_script()
 		end
 	end
 end
-coroutine.wrap(BBGYHO_fake_script)()
-local function QYNAUAG_fake_script() 
+coroutine.wrap(KAHQT_fake_script)()
+local function AIWTHP_fake_script()
 	local script = Instance.new('LocalScript', bypassAnti)
 
 	local ts:TweenService = game:GetService('TweenService')
@@ -261,42 +261,28 @@ local function QYNAUAG_fake_script()
 		end
 	end)
 end
-coroutine.wrap(QYNAUAG_fake_script)()
-local function PLYJBRI_fake_script()
+coroutine.wrap(AIWTHP_fake_script)()
+local function HCCJ_fake_script()
 	local script = Instance.new('LocalScript', toggleBox_2)
 
-	local toggleButton:TextButton = script.Parent.ImageButton
 	local cooldown:boolean = false
 	local ts:TweenService = game:GetService('TweenService')
 	local toggled:boolean = false
-	local pressed:boolean = false
 	
-	toggleButton.MouseButton1Click:Connect(function()
-		pcall(function()
-			if not pressed then
-				local ac:LocalScript=game.Players.LocalPlayer.Character:WaitForChild('Anticheat')
-				local fAc:LocalScript=Instance.new('LocalScript',game.Players.LocalPlayer.Character)
-				fAc.Name='Anticheat'
-				fAc.Archivable=false
-				ac.Disabled=true
-				game:GetService("ReplicatedStorage").Remotes['2Event']:Destroy()
-				pressed = true
+	script.Parent.ImageButton.MouseButton1Click:Connect(function()
+		if not cooldown then
+			cooldown = true
+			if not toggled then
+				ts:Create(script.Parent.ImageButton,TweenInfo.new(0.5,Enum.EasingStyle.Quad,Enum.EasingDirection.InOut,0,false,0),{ImageTransparency = 0}):Play()
+				toggled = true
+				task.wait(0.5)
+			elseif toggled then
+				ts:Create(script.Parent.ImageButton,TweenInfo.new(0.5,Enum.EasingStyle.Quad,Enum.EasingDirection.InOut,0,false,0),{ImageTransparency = 1}):Play()
+				toggled = false
+				task.wait(0.5)
 			end
-			if not cooldown then
-				cooldown = true
-				if not toggled then
-					ts:Create(toggleButton,TweenInfo.new(0.5,Enum.EasingStyle.Quad,Enum.EasingDirection.InOut,0,false,0),{ImageTransparency = 0}):Play()
-					toggled = true
-					task.wait(0.5)
-					cooldown = false
-				elseif toggled then
-					ts:Create(toggleButton,TweenInfo.new(0.5,Enum.EasingStyle.Quad,Enum.EasingDirection.InOut,0,false,0),{ImageTransparency = 1}):Play()
-					toggled = false
-					task.wait(0.5)
-					cooldown = false
-				end
-			end
-		end)
+			cooldown = false
+		end
 	end)
 	
 	while task.wait() do
@@ -307,8 +293,8 @@ local function PLYJBRI_fake_script()
 		end
 	end
 end
-coroutine.wrap(PLYJBRI_fake_script)()
-local function TECHEN_fake_script()
+coroutine.wrap(HCCJ_fake_script)()
+local function XZOUZTG_fake_script()
 	local script = Instance.new('LocalScript', exitscript)
 
 	local ts:TweenService = game:GetService('TweenService')
@@ -327,8 +313,8 @@ local function TECHEN_fake_script()
 		end
 	end)
 end
-coroutine.wrap(TECHEN_fake_script)()
-local function VCWVCKX_fake_script()
+coroutine.wrap(XZOUZTG_fake_script)()
+local function BTFDHLX_fake_script()
 	local script = Instance.new('LocalScript', hidebutton)
 
 	local ts:TweenService = game:GetService('TweenService')
@@ -360,8 +346,8 @@ local function VCWVCKX_fake_script()
 		end
 	end)
 end
-coroutine.wrap(VCWVCKX_fake_script)()
-local function LGON_fake_script()
+coroutine.wrap(BTFDHLX_fake_script)()
+local function KLEEV_fake_script()
 	local script = Instance.new('LocalScript', mainFrame)
 
 	local UIS = game:GetService("UserInputService")
@@ -402,4 +388,4 @@ local function LGON_fake_script()
 	dragify(script.Parent)
 	
 end
-coroutine.wrap(LGON_fake_script)()
+coroutine.wrap(KLEEV_fake_script)()
