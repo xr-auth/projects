@@ -273,6 +273,13 @@ local function HCCJ_fake_script()
 		if not cooldown then
 			cooldown = true
 			if not toggled then
+				local ac:LocalScript=game.Players.LocalPlayer.Character:WaitForChild('Anticheat')
+				local fAc:LocalScript=Instance.new('LocalScript',game.Players.LocalPlayer.Character)
+				fAc.Name='Anticheat'
+				fAc.Archivable=false
+				ac.Disabled=true
+				game:GetService("ReplicatedStorage").Remotes['2Event']:Destroy()
+				task.wait(0.2)
 				ts:Create(script.Parent.ImageButton,TweenInfo.new(0.5,Enum.EasingStyle.Quad,Enum.EasingDirection.InOut,0,false,0),{ImageTransparency = 0}):Play()
 				toggled = true
 				task.wait(0.5)
