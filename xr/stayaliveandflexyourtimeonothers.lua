@@ -381,7 +381,7 @@ local function XRACAV_fake_script()
 	local toggleButton = script.Parent.ImageButton
 	local ts = game:GetService('TweenService')
 	local cooldown = false
-	
+
 	toggleButton.MouseButton1Click:Connect(function()
 		if not cooldown then
 			cooldown = true
@@ -396,7 +396,7 @@ local function XRACAV_fake_script()
 			cooldown = false
 		end
 	end)
-	
+
 	rs.Heartbeat:Connect(function()
 		if statusFolder:FindFirstChild('killAura1Enabled').Value then
 			local s,e = pcall(function()
@@ -439,7 +439,7 @@ local function EKWC_fake_script()
 	local toggleButton = script.Parent.ImageButton
 	local ts = game:GetService('TweenService')
 	local cooldown = false
-	
+
 	toggleButton.MouseButton1Click:Connect(function()
 		if not cooldown then
 			cooldown = true
@@ -454,7 +454,7 @@ local function EKWC_fake_script()
 			cooldown = false
 		end
 	end)
-	
+
 	rs.Heartbeat:Connect(function()
 		if statusFolder:FindFirstChild('killAura2Enabled').Value then
 			local s,e = pcall(function()
@@ -473,7 +473,7 @@ local function EKWC_fake_script()
 									local sword:Tool=char.Character:FindFirstChildWhichIsA("Tool")
 									sword:Activate()
 									for c=0,10,1 do
-										game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new(0,0,9.5)
+										game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new(0,0,6)
 										firetouchinterest(sword.Handle,v.Character.HumanoidRootPart,0)
 										firetouchinterest(sword.Handle,v.Character.HumanoidRootPart,1)
 									end
@@ -500,7 +500,7 @@ local function MRQGOH_fake_script()
 	local toggleButton = script.Parent.ImageButton
 	local ts = game:GetService('TweenService')
 	local cooldown = false
-	
+
 	toggleButton.MouseButton1Click:Connect(function()
 		if not cooldown then
 			cooldown = true
@@ -515,7 +515,7 @@ local function MRQGOH_fake_script()
 			cooldown = false
 		end
 	end)
-	
+
 	rs.Heartbeat:Connect(function()
 		if statusFolder:FindFirstChild('autoWalkEnabled').Value then
 			local s,e = pcall(function()
@@ -542,7 +542,7 @@ local function ZRIQY_fake_script()
 	local toggleButton = script.Parent.ImageButton
 	local cooldown = false
 	local statusFolder = game.Players.LocalPlayer.PlayerGui:WaitForChild('xrHub').scriptStatus
-	
+
 	toggleButton.MouseButton1Click:Connect(function()
 		if not cooldown then
 			cooldown = true
@@ -557,8 +557,8 @@ local function ZRIQY_fake_script()
 			cooldown = false
 		end
 	end)
-	
-	
+
+
 	rs.Heartbeat:Connect(function()
 		local s,e = pcall(function()
 			if statusFolder:FindFirstChild('speedEnabled').Value then
@@ -597,7 +597,7 @@ local function UQEW_fake_script()
 	local replicatedStorage = game:GetService('ReplicatedStorage')
 	local events = replicatedStorage:WaitForChild('Remotes')
 	local killEvent = events:WaitForChild('StudEvent')
-	
+
 	local killMessages = {
 		"{v} just died.. wth?",
 		"lol, you are bad noob",
@@ -621,7 +621,7 @@ local function UQEW_fake_script()
 		"next?",
 		"destroyed tbh"
 	}
-	
+
 	toggleButton.MouseButton1Click:Connect(function()
 		if not cooldown then
 			cooldown = true
@@ -636,7 +636,7 @@ local function UQEW_fake_script()
 			cooldown = false
 		end
 	end)
-	
+
 	killEvent.OnClientEvent:connect(function(victim, killer)
 		if statusFolder:FindFirstChild('AutoChatEnabled').Value then
 			local s,e = pcall(function()
@@ -660,15 +660,15 @@ local function SOFX_fake_script()
 	local ts = game:GetService('TweenService')
 	local button = script.Parent
 	local cooldown = false
-	
+
 	button.MouseEnter:Connect(function()
 		ts:Create(button,TweenInfo.new(0.2,Enum.EasingStyle.Quad,Enum.EasingDirection.InOut,0,false,0),{BackgroundColor3 = Color3.new(0.164706, 0.270588, 0.615686)}):Play()
 	end)
-	
+
 	button.MouseLeave:Connect(function()
 		ts:Create(button,TweenInfo.new(0.2,Enum.EasingStyle.Quad,Enum.EasingDirection.InOut,0,false,0),{BackgroundColor3 = Color3.new(0.270588, 0.439216, 1)}):Play()
 	end)
-	
+
 	button.MouseButton1Click:Connect(function()
 		if not cooldown then
 			cooldown = true
@@ -694,15 +694,15 @@ local function HOXTUO_fake_script()
 	local ts = game:GetService('TweenService')
 	local button = script.Parent
 	local cooldown = false
-	
+
 	button.MouseEnter:Connect(function()
 		ts:Create(button,TweenInfo.new(0.2,Enum.EasingStyle.Quad,Enum.EasingDirection.InOut,0,false,0),{BackgroundColor3 = Color3.new(0.164706, 0.270588, 0.615686)}):Play()
 	end)
-	
+
 	button.MouseLeave:Connect(function()
 		ts:Create(button,TweenInfo.new(0.2,Enum.EasingStyle.Quad,Enum.EasingDirection.InOut,0,false,0),{BackgroundColor3 = Color3.new(0.270588, 0.439216, 1)}):Play()
 	end)
-	
+
 	button.MouseButton1Click:Connect(function()
 		if not cooldown then
 			cooldown = true
@@ -728,15 +728,15 @@ local function WODWNAG_fake_script()
 	local ts = game:GetService('TweenService')
 	local button = script.Parent
 	local cooldown = false
-	
+
 	button.MouseEnter:Connect(function()
 		ts:Create(button,TweenInfo.new(0.2,Enum.EasingStyle.Quad,Enum.EasingDirection.InOut,0,false,0),{BackgroundColor3 = Color3.new(0.164706, 0.270588, 0.615686)}):Play()
 	end)
-	
+
 	button.MouseLeave:Connect(function()
 		ts:Create(button,TweenInfo.new(0.2,Enum.EasingStyle.Quad,Enum.EasingDirection.InOut,0,false,0),{BackgroundColor3 = Color3.new(0.270588, 0.439216, 1)}):Play()
 	end)
-	
+
 	button.MouseButton1Click:Connect(function()
 		if not cooldown then
 			cooldown = true
@@ -764,7 +764,7 @@ local function VYSZDQ_fake_script()
 	local cooldown = false
 	local closed = false
 	local mainframe = script.Parent.Parent.background.mainStuff
-	
+
 	button.MouseButton1Click:Connect(function()
 		if not cooldown then
 			cooldown = true
@@ -830,6 +830,6 @@ local function PFEXG_fake_script()
 		end)
 	end
 	dragify(script.Parent)
-	
+
 end
 coroutine.wrap(PFEXG_fake_script)()
