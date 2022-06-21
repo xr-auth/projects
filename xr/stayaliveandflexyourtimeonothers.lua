@@ -574,7 +574,7 @@ local function ZRIQY_fake_script()
 				end
 				while task.wait() do
 					pcall(function()
-						game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+						game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 40
 					end)
 				end
 			else
